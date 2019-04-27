@@ -12,7 +12,7 @@ pass="BMZ4zE7My62vLgjxhtpfgGeSIIiL6afdeoeTh1dR" # your SheepIt password or key
 mem="" # RAM available to SheepIt (
 gpu="--no-gpu" # if you have a GPU leave this empty
 computeMethod="CPU" # leave blank if you are unsure
-renderTime="59" # The max time you are willing to commit to render one frame
+renderTime="" # The max time you are willing to commit to render one frame
 
 if [ ! -f "client.jar" ]; then
     echo "SheepIt client not found. Downloading the client."
