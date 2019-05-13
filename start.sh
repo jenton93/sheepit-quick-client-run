@@ -9,7 +9,7 @@ pass="BMZ4zE7My62vLgjxhtpfgGeSIIiL6afdeoeTh1dR" # your SheepIt password or key
 #######################
 # System settings
 #######################
-mem="1" # Amount of RAM for SheepIt (in GB)
+mem="4" # Amount of RAM for SheepIt (in GB)
 gpu="--no-gpu" # if you have a GPU leave this empty
 computeMethod="CPU" # leave blank if you are unsure
 renderTime="" # The max time you are willing to commit to render one frame
