@@ -9,10 +9,22 @@ pass="BMZ4zE7My62vLgjxhtpfgGeSIIiL6afdeoeTh1dR" # your SheepIt password or key
 #######################
 # System settings
 #######################
-mem="4" # Amount of RAM for SheepIt (in GB)
+blenderDeps="blender default-jre" # Packages to install which will include required dependencies
+mem="5" # Amount of RAM for SheepIt (in GB)
 gpu="--no-gpu" # if you have a GPU leave this empty
 computeMethod="CPU" # leave blank if you are unsure
-renderTime="" # The max time you are willing to commit to render one frame
+renderTime="82" # The max time you are willing to commit to render one frame
+
+for dep in ${blenderDeps[@]}; do
+    if ! dpkg -s $dep > /dev/null 2>&1; then
+        echo; echo "#############################";
+	printf "You need to install some missing packages which are required to run Blender. Running the following command will install all required dependencies.\n\nsudo apt install ${blenderDeps[@]}";
+        echo; echo "#############################"; echo;
+	exit;
+    else
+	echo "Is '${dep}' installed? ...YES";
+    fi
+done
 
 if [ ! -f "client.jar" ]; then
     echo "SheepIt client not found. Downloading the client."
@@ -32,5 +44,6 @@ if [ ! -z $renderTime ]; then
     renderTime="-rendertime ${renderTime}"
 fi                                                                                                                             
 
+echo;
 # This will run the client with the settings above
 java -jar client.jar $mem -ui text $gpu -cache-dir $HOME/sheepit-cache $computeMethod $renderTime -login $username -password $pass
