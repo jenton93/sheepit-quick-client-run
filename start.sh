@@ -46,4 +46,4 @@ fi
 
 echo;
 # This will run the client with the settings above
-java -jar client.jar $mem -ui text $gpu -cache-dir $HOME/sheepit-cache $computeMethod $renderTime -login $username -password $pass
+java -jar client.jar $mem -ui text $gpu -cache-dir $HOME/sheepit-cache $computeMethod cores=6 $renderTime -login $username -password $pass
