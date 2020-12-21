@@ -3,14 +3,14 @@
 #######################
 # User Credentials
 #######################
-username="x000111" # your SheepIt username
-pass="BMZ4zE7My62vLgjxhtpfgGeSIIiL6afdeoeTh1dR" # your SheepIt password or key
+username="click3rs" # your SheepIt username
+pass="MNDBcov21PlAstsnC1TfWpEMr7GluMdmhRad9IAX" # your SheepIt password or key
 
 #######################
 # System settings
 #######################
 blenderDeps="blender default-jre" # Packages to install which will include required dependencies
-mem="5" # Amount of RAM for SheepIt (in GB)
+# mem="5" # Amount of RAM for SheepIt (in GB)
 gpu="--no-gpu" # if you have a GPU leave this empty
 computeMethod="CPU" # leave blank if you are unsure
 renderTime="82" # The max time you are willing to commit to render one frame
